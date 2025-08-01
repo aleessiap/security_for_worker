@@ -15,3 +15,6 @@ La soluzione ha affrontato due delle principali criticità dei contesti lavorati
 - il mancato utilizzo dei DPI da parte dei lavoratori;
 - la scarsa segnalazione degli eventi near miss, fondamentali per la prevenzione degli incidenti.
 
+## Licenza
+
+Questo progetto è distribuito sotto licenza [CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/).
