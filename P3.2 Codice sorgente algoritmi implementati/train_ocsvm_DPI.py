@@ -123,7 +123,7 @@ def classic(train):
     # Export the model to Python code
     code = m2c.export_to_python(model)
     print(code)
-    with open('ocsvm.py', 'w') as fd:
+    with open(folder + 'ocsvm.py', 'w') as fd:
         fd.write(code)
 
 folder = 'DPI/'
