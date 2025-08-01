@@ -1,0 +1,11 @@
+{
+    "i18n-ally.displayLanguage": "en",
+    "i18n-ally.sourceLanguage": "it",
+    "i18n-ally.enabledParsers": ["ts"],
+    "i18n-ally.localesPaths": [
+        "src/assets/i18n"
+    ],
+    "i18n-ally.namespace": true,
+    "i18n-ally.pathMatcher": "{locale}/{namespace}.ts",
+    "i18n-ally.keystyle": "nested"
+}

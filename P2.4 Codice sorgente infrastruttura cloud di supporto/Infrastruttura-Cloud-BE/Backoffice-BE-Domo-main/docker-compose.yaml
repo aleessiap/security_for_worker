@@ -1,0 +1,58 @@
+services:
+  # frontend:
+  #   env_file:
+  #     - .production.env
+  #   container_name: domo-frontend
+  #   build:
+  #     context: ../Backoffice-FE-Domo/
+  #     dockerfile: ./Dockerfile
+  #     args:
+  #       AUTH_TOKEN: ${AUTH_TOKEN}
+  #   ports:
+  #     - ${FRONTEND_PORT_FORWARD}:${FRONTEND_PORT}
+  #   depends_on:
+  #     - backend
+  #   restart: unless-stopped
+  #   networks:
+  #     - domo-network
+
+  backend:
+    env_file:
+      - .production.env
+    container_name: domo-backend
+    build:
+      context: .
+      dockerfile: ./Dockerfile
+      args:
+        AUTH_TOKEN: ${AUTH_TOKEN}
+    ports:
+      - ${BACKEND_PORT_FORWARD}:${BACKEND_PORT}
+    depends_on:
+      - postgres
+    restart: unless-stopped
+    networks:
+      - domo-network
+
+  postgres:
+    env_file:
+      - .production.env
+    container_name: domo-postgres
+    image: postgres:14-alpine
+    ports:
+      - ${DATABASE_PORT_FORWARD}:${DATABASE_PORT}
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    environment:
+      - POSTGRES_PASSWORD=${DATABASE_PASSWORD}
+      - POSTGRES_USER=${DATABASE_USER}
+      - POSTGRES_DB=${DATABASE_NAME}
+    restart: unless-stopped
+    networks:
+      - domo-network
+
+volumes:
+  postgres_data:
+  
+networks:
+  domo-network:
+    driver: bridge

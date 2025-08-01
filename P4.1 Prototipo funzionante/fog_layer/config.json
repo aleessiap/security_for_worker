@@ -1,0 +1,15 @@
+{
+    "wifi_ssid": "SSID",
+    "wifi_pass": "Password",
+
+
+    "mqtt_broker": "xxx.xxx.xxx.xxx",
+    "mqtt_port": 1883,
+    "mqtt_client_id": "fog_workplace1",
+    "mqtt_topic_operators": ["tinys3_op1", "tinys3_op2"],
+    "mqtt_topic_cloud": "workplace1",
+    "mqtt_user": "",
+    "mqtt_password": "",
+    "api_token": "api_token_12345",
+    "cloud_api":  "http://57.129.55.123:3000/operator-events"
+}

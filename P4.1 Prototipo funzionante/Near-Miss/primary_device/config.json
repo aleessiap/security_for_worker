@@ -1,0 +1,20 @@
+{
+    "wifi_ssid": "SSID",
+    "wifi_pass": "Password",
+
+    "IMU_SERVICE": "imuservicecode",
+    "IMU_CHAR_READ": "char_read_code",    
+    "IMU_CHAR_WRITE": "char_write_code",
+    "IMU_MAC_ADDRESS": "MAC_address",
+    "WINDOW_SIZE": 2, 
+
+    "register_data_mode": false,
+    "data_to_analyze": ["GyroX", "GyroY", "GyroZ","AccX", "AccY", "AccZ", "AccMag", "AngX", "AngY", "AngZ", "AngMag"],
+
+    "mqtt_broker": "xxx.xxx.xxx.xxx",
+    "mqtt_port": 1883,
+    "mqtt_client_id": "workers2",
+    "mqtt_topic": "tinys3_op1",
+    "mqtt_user": "",
+    "mqtt_password": ""
+}
